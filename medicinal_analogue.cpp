@@ -1,7 +1,14 @@
-#include <medicinal_analodue.h>
+#include "medicinal_analodue.h"
 
+
+void medicinal_analodue::SetInitial(string FileName, double FilePrice, string FileCompound)
+{
+        name = FileName;
+        price = FilePrice;
+        compound = FileCompound;
+}
 void medicinal_analodue::GetInfo()
-      {
+{
         while (true)
         {
           cout << "Введите название препарата (чтобы закончить подбор введите '0')";
@@ -17,4 +24,4 @@ void medicinal_analodue::GetInfo()
               cout << "Состав:" + (вектор из базы данных позже сделаю)[i].compound << endl; 
             }
         }
-      }
+ }
