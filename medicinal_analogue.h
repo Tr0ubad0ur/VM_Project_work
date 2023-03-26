@@ -12,6 +12,7 @@ class Medication
       void SetInitial(string FileName, double FilePrice, string FileCompound);
       void GetInfo();
       
+  
 };
 
 
