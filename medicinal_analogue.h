@@ -9,13 +9,7 @@ class Medication
       double price;
       string compound;
   public:
-      void SetInitial(string FileName, double FilePrice, string FileCompound)
-      {
-        name = FileName;
-        price = FilePrice;
-        compound = FileCompound;
-      }
-      
+      void SetInitial(string FileName, double FilePrice, string FileCompound);
       void GetInfo();
       
 };
