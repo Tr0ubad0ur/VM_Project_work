@@ -11,7 +11,7 @@ void print_menu() {
     cout << "+----------------------------------------------------------+\n";
     cout << "|                        1. Войти                          |\n";
     cout << "+----------------------------------------------------------+\n";
-    cout << "|                   2. Зарегестрироваться                  |\n";
+    cout << "|                   2. Зарегистрироваться                  |\n";
     cout << "+----------------------------------------------------------+\n";
     cout << "|              3. Вывести всех пользователей               |\n";
     cout << "+----------------------------------------------------------+\n";
@@ -19,11 +19,18 @@ void print_menu() {
     cout << "+----------------------------------------------------------+\n";
     cout << ">>>";
 }
-
+/*
+bool check(string v) {
+    for (int i = 0; i < v.length(); i++)
+        if (isdigit(v[i]) == false)
+            return true;
+    return false;
+}
+*/
 int get_variant(int count) {
     int variant;
     cin >> variant;
-    while (/*isalpha(variant) or */variant < 1 or variant > count) {
+    while (variant < 1 or variant > count ) {
         cout << "Неправильный ввод данных. Попробуйте ещё." << endl;
         cout << ">>>";
         cin >> variant;
