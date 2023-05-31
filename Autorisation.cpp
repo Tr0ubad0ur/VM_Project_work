@@ -55,7 +55,7 @@ public:
 
 };
 
-bool Find() {
+bool Find() { 
 	ifstream fin;
 	fin.open("users.txt");
 	if (!fin.is_open()) {
@@ -76,23 +76,19 @@ bool Find() {
 			}
 			Data.push_back(t);
 		}
-			int k = 0;
+		    bool flag = false;
+			
 			string User_Name;
 			cin >> User_Name;
 			for (int i = 0; i < Data.size(); ++i) 
 			{   
 				if (Data[i].Log == User_Name) 
 				{
-					return true;
+					flag = true;
 				}
-				k = k + 1;
+				
 			}
-			if (k == Data.size()) 
-			{ 
-					cout << "Хм, такого пользователя нет. Попробуйте ввести данные ещё раз" << endl;
-					cout << "Или выберете пункт - 2.Зарегестрироваться" << endl;
-					return false;
-			}
+			return flag;
 	}
 	fin.close();
 
@@ -135,7 +131,7 @@ bool Find_ANLG() {
 			
 			BData.push_back(t);
 		}
-		int k = 0;
+		    bool flag = false;
 			string Drug_Name;
 			cin >> Drug_Name;
 			for (int i = 0; i < BData.size(); ++i) {
@@ -146,16 +142,11 @@ bool Find_ANLG() {
 					cout << "Аналог: " << BData[i].Analog << endl;
 					cout << "Цена: " << BData[i].Analog_Price << endl;
 					cout << "Состав: " << BData[i].Compaund << endl;
-					return true;
-					k = k + 1;
+					flag = true;
 				}
-				if (k == BData.size()) {
-					cout << "Такого препарата нет :( Попробуйте ввести данные ещё раз" << endl;
-					cout << "Или выберете пункт - 2.Добавить новое лекарство и его аналог" << endl;
-					return false;
-				}
+				
 			}
-		
+			return flag;
 	}
 	fin.close();
 
